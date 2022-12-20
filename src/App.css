@@ -29,6 +29,7 @@ body {
     radial-gradient(rgb(217, 217, 217) 2px, transparent 0);
   background-size: 30px 30px, 30px 30px;
 }
+
 .header {
   margin-left: 0;
   margin-top: 10px;
@@ -59,12 +60,100 @@ body {
   width: 40vw;
 }
 .model {
+  position: relative;
+  width: 45%;
 }
 .avatar {
-  position: relative;
+  height: 100px;
+  width: 200px;
+  position: absolute;
+  margin-left: 10rem;
+  margin-top: 5rem;
 }
 .avatar img {
-  position: absolute;
-  height: 20vh;
-  width: 15vw;
+  position: fixed;
+  height: 25rem;
+  width: 23rem;
+  border: 5px solid rgb(31, 243, 250);
+  padding: 20px;
+  padding-bottom: 0;
+}
+#glass {
+  z-index: 10;
+}
+#eyebrow {
+  z-index: 9;
+}
+#eye {
+  z-index: 8;
+}
+#mouth {
+  z-index: 7;
+}
+#nose {
+  z-index: 6;
+}
+#hair {
+  z-index: 5;
+}
+#layer3 {
+  z-index: 4;
+}
+#layer1 {
+  z-index: 2;
+}
+#layer2 {
+  z-index: 3;
+}
+#body {
+  z-index: 1;
+}
+#button-random {
+  position: fixed;
+  margin-top: 410px;
+  margin-left: 110px;
+  z-index: 1;
+  height: 40px;
+  width: 150px;
+  border: none;
+  font-size: 1.2rem;
+  background-color: #e66f14;
+  color: #ffffff;
+  border-radius: 5px;
+}
+#button-random:hover {
+  opacity: 0.9;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+.list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-top: 5rem;
+  padding-right: 8.5rem;
+  width: 50%;
+}
+.body {
+  margin-bottom: 50px;
+  height: auto;
+  width: 100%;
+  border: 5px solid rgb(215, 149, 17);
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 15px;
+}
+.body img {
+  height: 80px;
+  width: 80px;
+  margin: 10px;
+  border: 2px solid rgb(255, 157, 157);
+  border-radius: 15px;
+  background-color: rgb(89, 238, 103);
+}
+.body img:hover {
+  background-color: #e9e6e6;
 }
