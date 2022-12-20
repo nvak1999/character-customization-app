@@ -15,6 +15,9 @@ import {
   clothes3,
 } from "../utils";
 function Main() {
+  const randomNumberInRange = (min, max) => {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  };
   const [glass, setGlass] = useState(glasses[randomNumberInRange(0, 16)]);
   const [iBody, setIbody] = useState(body[randomNumberInRange(0, 16)]);
   const [iEye, setIeye] = useState(eyes[randomNumberInRange(0, 23)]);
@@ -32,7 +35,30 @@ function Main() {
   const [iclothes3, setIclothes3] = useState(
     clothes3[randomNumberInRange(0, 8)]
   );
-  const [randomSkin, setRandomSkin] = useState([
+  const [skin, setSkin] = useState([
+    glass,
+    iBody,
+    iEye,
+    iHair,
+    iMouth,
+    ieyebrows,
+    iclothes1,
+    iclothes2,
+    iclothes3,
+  ]);
+  useEffect(() => {
+    setSkin([
+      glass,
+      iBody,
+      iEye,
+      iHair,
+      iMouth,
+      ieyebrows,
+      iclothes1,
+      iclothes2,
+      iclothes3,
+    ]);
+  }, [
     glass,
     iBody,
     iEye,
@@ -87,39 +113,12 @@ function Main() {
     setIclothes2(clothes2[randomNumberInRange(0, 4)]);
     setIclothes3(clothes3[randomNumberInRange(0, 8)]);
   };
-  function randomNumberInRange(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-  }
-  useEffect(() => {
-    setRandomSkin([
-      glass,
-      iBody,
-      iEye,
-      iHair,
-      iMouth,
-      ieyebrows,
-      iclothes1,
-      iclothes2,
-      iclothes3,
-    ]);
-  }, [
-    glass,
-    iBody,
-    iEye,
-    iHair,
-    iMouth,
-    ieyebrows,
-    iclothes1,
-    iclothes2,
-    iclothes3,
-    randomSkin,
-  ]);
 
   return (
     <div>
       <Header />
       <div className="container">
-        <Model handleClick={randomize} item={randomSkin} />
+        <Model handleClick={randomize} item={skin} />
         <List handleClick={handleClick} />
       </div>
     </div>
