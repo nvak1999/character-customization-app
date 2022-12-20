@@ -75,28 +75,28 @@ function Main() {
         setGlass(glasses[item - 1]);
         break;
       case 1:
-        setGlass(body[item - 1]);
+        setIbody(body[item - 1]);
         break;
       case 2:
-        setGlass(eyes[item - 1]);
+        setIeye(eyes[item - 1]);
         break;
       case 3:
-        setGlass(hair[item - 1]);
+        setIhair(hair[item - 1]);
         break;
       case 4:
-        setGlass(mouth[item - 1]);
+        setImouth(mouth[item - 1]);
         break;
       case 5:
-        setGlass(eyebrows[item - 1]);
+        setIeyebrows(eyebrows[item - 1]);
         break;
       case 6:
-        setGlass(clothes1[item - 1]);
+        setIclothes1(clothes1[item - 1]);
         break;
       case 7:
-        setGlass(clothes2[item - 1]);
+        setIclothes2(clothes2[item - 1]);
         break;
       case 8:
-        setGlass(clothes3[item - 1]);
+        setIclothes3(clothes3[item - 1]);
         break;
       default:
     }
