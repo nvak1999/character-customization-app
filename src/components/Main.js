@@ -15,6 +15,7 @@ import {
   clothes3,
 } from "../utils";
 function Main() {
+  const [target, setTarget] = useState(false);
   const randomNumberInRange = (min, max) => {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   };
@@ -68,35 +69,47 @@ function Main() {
     iclothes1,
     iclothes2,
     iclothes3,
+    target,
   ]);
-  const handleClick = (item, number) => {
+
+  const handleClick = (item, number, index) => {
+    setTarget(false);
     switch (number) {
       case 0:
         setGlass(glasses[item - 1]);
+        setTarget(true);
         break;
       case 1:
         setIbody(body[item - 1]);
+
         break;
       case 2:
         setIeye(eyes[item - 1]);
+
         break;
       case 3:
         setIhair(hair[item - 1]);
+
         break;
       case 4:
         setImouth(mouth[item - 1]);
+
         break;
       case 5:
         setIeyebrows(eyebrows[item - 1]);
+
         break;
       case 6:
         setIclothes1(clothes1[item - 1]);
+
         break;
       case 7:
         setIclothes2(clothes2[item - 1]);
+
         break;
       case 8:
         setIclothes3(clothes3[item - 1]);
+
         break;
       default:
     }
@@ -119,7 +132,7 @@ function Main() {
       <Header />
       <div className="container">
         <Model handleClick={randomize} item={skin} />
-        <List handleClick={handleClick} />
+        <List handleClick={handleClick} target={target} />
       </div>
     </div>
   );

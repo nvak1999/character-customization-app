@@ -1,15 +1,15 @@
 import React from "react";
 
-function Body({ handleClick, item, number }) {
+function Body({ handleClick, item, number, target }) {
   return (
-    <div className="body">
+    <div className="list-item">
       <div className="item">
-        {item.map((i) => (
+        {item.map((e, i) => (
           <img
             onClick={() => {
-              handleClick(i.id, number);
+              handleClick(e.id, number, i);
             }}
-            src={i.url}
+            src={e.url}
             alt=""
           />
         ))}
